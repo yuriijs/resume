@@ -1,0 +1,91 @@
+<div>
+  <main>
+    <div><h1>{{name}}</h1></div>
+    <section>
+      {{#each users}}
+      
+        <br />
+        <div><h2><em><u>users:</u></em></h2></div>
+        <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+        <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+        <div><div><b>Gender: </b><span class="badge text-bg-success">{{gender}}</span></div>
+        <div><div><b>Age: </b><span class="badge text-bg-info">{{age}}</span></div>
+
+        <section>
+          {{#each friends}}
+            <br />
+            <div><h3><em><u>friends:</u></em></h3></div>
+            <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+            <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+            <div><div><b>Gender: </b><span class="badge text-bg-success">{{gender}}</span></div>
+            <div><div><b>Age: </b><span class="badge text-bg-info">{{age}}</span></div>
+
+          <section>
+            {{#each mutual_friends}}
+              <br />
+              <div><h3><em><u>mutual friends:</u></em></h3></div>
+              <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+              <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+              <div><div><b>Gender: </b><span class="badge text-bg-success">{{gender}}</span></div>
+              <div><div><b>Age: </b><span class="badge text-bg-info">{{age}}</span></div>
+
+            <section>
+              {{#each mutual_friends}}
+                <br />
+                <div><h3><em><u>mutual friends:</u></em></h3></div>
+                <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+                <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+                <div><div><b>Gender: </b><span class="badge text-bg-success">{{gender}}</span></div>
+                <div><div><b>Age: </b><span class="badge text-bg-info">{{age}}</span></div>
+              {{/each}}
+            </section>
+
+            {{/each}}
+          </section>
+
+          {{#each groups}}
+            <br />
+            <div><h3><em><u>groups:</u></em></h3></div>
+            <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+            <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+            <div><div><b>Description: </b><span class="badge text-bg-warning">{{description}}</span></div>
+
+            <section>
+              {{#each members}}
+                <br />
+                <div><h3><em><u>members:</u></em></h3></div>
+                <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+                <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+                <div><div><b>Gender: </b><span class="badge text-bg-success">{{gender}}</span></div>
+                <div><div><b>Age: </b><span class="badge text-bg-info">{{age}}</span></div>
+              {{/each}}
+            </section>
+          {{/each}}
+
+          {{/each}}
+        </section>
+
+        {{#each groups}}
+          <br />
+          <div><h3><em><u>groups:</u></em></h3></div>
+          <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+          <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+          <div><div><b>Description: </b><span class="badge text-bg-warning">{{description}}</span></div>
+
+          <section>
+            {{#each members}}
+              <br />
+              <div><h3><em><u>members:</u></em></h3></div>
+              <div><b>id: </b><span class="badge text-bg-secondary">{{id}}</span></div>
+              <div><div><b>Name: </b><span class="badge text-bg-primary">{{name}}</span></div>
+              <div><div><b>Gender: </b><span class="badge text-bg-success">{{gender}}</span></div>
+              <div><div><b>Age: </b><span class="badge text-bg-info">{{age}}</span></div>
+            {{/each}}
+          </section>
+        {{/each}}
+
+      {{/each}}
+      
+    </section>
+  </main>
+</div>
