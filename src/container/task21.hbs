@@ -2,37 +2,47 @@
   <div class='card'>
     <div class='card-body'>
       {{#with heading}}
-        {{#with main}}
-          <div><h1>{{title}}</h1></div>
-          <div><p>{{text}}</p></div>
-          {{#with button_text}}
-            <div><button type='button' class='btn btn-primary'>{{solid}}</button></div>
-            <br />
-            <div><button type='button' class='btn btn-outline-primary'>{{outline}}</button></div>
-          {{/with}}
-        {{/with}}
-        <hr />
+        <div class='card'>
+          <div class='card-body'>
+            {{#with main}}
+              <div><h1>{{title}}</h1></div>
+              <div><p>{{text}}</p></div>
+              {{#with button_text}}
+                <div><button type='button' class='btn btn-primary'>{{solid}}</button></div>
+                <br />
+                <div><button type='button' class='btn btn-outline-primary'>{{outline}}</button></div>
+              {{/with}}
+            {{/with}}
+          </div>
+        </div>
         <br />
-        {{#with second}}
-          <div><h2>{{title}}</h2></div>
-          <div><p>{{text}}</p></div>
-          {{#with button_text}}
-            <div><button type='button' class='btn btn-secondary'>{{solid}}</button></div>
-            <br />
-            <div><button type='button' class='btn btn-outline-secondary'>{{outline}}</button></div>
-          {{/with}}
-        {{/with}}
-        <hr />
+        <div class='card'>
+          <div class='card-body'>
+            {{#with second}}
+              <div><h2>{{title}}</h2></div>
+              <div><p>{{text}}</p></div>
+              {{#with button_text}}
+                <div><button type='button' class='btn btn-secondary'>{{solid}}</button></div>
+                <br />
+                <div><button type='button' class='btn btn-outline-secondary'>{{outline}}</button></div>
+              {{/with}}
+            {{/with}}
+          </div>
+        </div>
         <br />
-        {{#with subblock}}
-          <div><h2>{{title}}</h2></div>
-          <div><p>{{text}}</p></div>
-          {{#with button_text}}
-            <div><button type='button' class='btn btn-dark'>{{solid}}</button></div>
-            <br />
-            <div><button type='button' class='btn btn-outline-dark'>{{outline}}</button></div>
-          {{/with}}
-        {{/with}}
+        <div class='card'>
+          <div class='card-body'>
+            {{#with subblock}}
+              <div><h2>{{title}}</h2></div>
+              <div><p>{{text}}</p></div>
+              {{#with button_text}}
+                <div><button type='button' class='btn btn-dark'>{{solid}}</button></div>
+                <br />
+                <div><button type='button' class='btn btn-outline-dark'>{{outline}}</button></div>
+              {{/with}}
+            {{/with}}
+          </div>
+        </div>
       {{/with}}
     </div>
   </div>
@@ -61,20 +71,24 @@
   <div class='card'>
     <div class='card-body'>
       {{#with paragraph}}
-        <div><p class="text-uppercase">{{text}}</p></div>
+        <div><p class="text-uppercase">{{title}}</p></div>
         <div><p class="text-lowercase">{{text}}</p></div>
         <a href='https://google.com' target='_blank'>
           <button type="button" class="btn btn-link">{{button.text}}</button>
         </a>
-        <ul>
-          {{#each list_name}}
-          <li>
-            <a href='https://google.com' target='_blank'>
-              <button type="button" class="btn btn-link">{{text}}</button>
-            </a>
-          </li>
-          {{/each}}
-        </ul>
+        <div class='card'>
+          <div class='card-body'>
+            <ul>
+              {{#each list_name}}
+              <li>
+                <a href='https://google.com' target='_blank'>
+                  <button type="button" class="btn btn-link">{{text}}</button>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
       {{/with}}
     </div>
   </div>
