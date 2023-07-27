@@ -1,7 +1,9 @@
 <main>
   {{#with page_header}}
     <h1 class='text-center'>{{title}}</h1>
-    <p class='text-center text-uppercase'>{{description}}</p>
+    <p
+      class='text-center text-uppercase'
+    >{{description}}</p>
   {{/with}}
   {{#with section}}
     <div class='card'>
@@ -11,7 +13,10 @@
             <div class='display-6 text-end'>{{main}}</div>
             <h2 class='text-end'>{{sub}}</h2>
           {{/with}}
-          <button type="button" class="btn btn-outline-info">{{button.text}}</button>
+          <button
+            type='button'
+            class='btn btn-outline-info'
+          >{{button.text}}</button>
         {{/with}}
       </div>
     </div>
@@ -24,10 +29,15 @@
             <div class='card'>
               <div class='card-body'>
                 {{#with efficiency}}
-                  <div class='display-4 text-muted'>{{title}}</div>
+                  <div
+                    class='display-4 text-muted'
+                  >{{title}}</div>
                   <h6>{{sub_title}}</h6>
                   <p>{{description}}</p>
-                  <button type="button" class="btn btn-outline-warning">{{button}}</button>
+                  <button
+                    type='button'
+                    class='btn btn-outline-warning'
+                  >{{button}}</button>
                 {{/with}}
               </div>
             </div>
@@ -35,10 +45,15 @@
             <div class='card'>
               <div class='card-body'>
                 {{#with innovation}}
-                  <div class='display-4 text-center text-muted'>{{title}}</div>
+                  <div
+                    class='display-4 text-center text-muted'
+                  >{{title}}</div>
                   <h6 class='text-center'>{{sub_title}}</h6>
                   <p class='text-center'>{{description}}</p>
-                  <button type="button" class="btn btn-outline-warning">{{button}}</button>
+                  <button
+                    type='button'
+                    class='btn btn-outline-warning'
+                  >{{button}}</button>
                 {{/with}}
               </div>
             </div>
@@ -46,10 +61,15 @@
             <div class='card'>
               <div class='card-body'>
                 {{#with collaboration}}
-                  <div class='display-4 text-end text-muted'>{{title}}</div>
+                  <div
+                    class='display-4 text-end text-muted'
+                  >{{title}}</div>
                   <h6 class='text-end'>{{sub_title}}</h6>
                   <p class='text-end'>{{description}}</p>
-                  <button type="button" class="btn btn-outline-warning">{{button}}</button>
+                  <button
+                    type='button'
+                    class='btn btn-outline-warning'
+                  >{{button}}</button>
                 {{/with}}
               </div>
             </div>
@@ -72,7 +92,10 @@
                     <div class='card-body'>
                       {{#with detail}}
                         <p>{{text}}</p>
-                        <button type="button" class="btn btn-success">{{button}}</button>
+                        <button
+                          type='button'
+                          class='btn btn-success'
+                        >{{button}}</button>
                       {{/with}}
                     </div>
                   </div>
@@ -84,8 +107,5 @@
       </div>
     </section>
   {{/with}}
-  
 
-
-  
 </main>
