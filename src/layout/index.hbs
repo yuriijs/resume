@@ -20,24 +20,31 @@
     {{!  ↓  підключаємо іконки bootstrap   --}}
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-    <link href='css/style.css' rel='stylesheet' type="text/css" />
-
   </head>
 
   <body>
 
-    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
+    <header class="p-5">
+      
+      <div class="card p-2">
+        <div class="row">
+          <div class="col-6">
+            <h1>Yurii Polevich</h1>
+          </div>
+          <div class="col-6 text-end">
+            <h1>Resume project</h1>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    {{!  ↓  ця конструкція показує куди шаблонізатору треба вставляти код з container файлу   }}
     {{{body}}}
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
 
     <script src="https://kit.fontawesome.com/d8ee4d253c.js" crossorigin="anonymous"></script>
-
-    <style>
-      h1 {
-        color: green;
-      }
-    </style>
 
   </body>
 

@@ -1,78 +1,72 @@
-<div>
+<main class="p-5">
   {{#with program.excursion}}
-    <main>
-      <div>
-        <h1>{{name}}</h1>
+    <div><h1>{{name}}</h1></div>
+    {{#with location}}
+      <div class="mt-4">
+        <h2>{{city}}, {{country}}</h2>
       </div>
-      {{#with location}}
-        <div>
-          <h2>{{city}}, {{country}}</h2>
-        </div>
-      {{/with}}
-      <div>{{date}}</div>
-      <br />
-      {{#each program}}
-        <div>
-          <h3>{{name}}</h3>
-        </div>
-        <div>
-          ({{type}},
-          {{duration}}
-          days)
-        </div>
-        <br />
-        <section>
-          {{#with details}}
-            {{#with museum}}
-              <b>{{name}}</b>
-              {{#with location}}
-                <address>
-                  {{address}},
-                  {{city}},
-                  {{country}}
-                </address>
-              {{/with}}
-              <ul>
-                {{#each exhibits}}
-                  <li><b>{{name}}</b></li>
-                  <div>
-                    ({{#if artist}} {{artist}}, {{/if}}
-                    {{description}})
-                  </div>
-                  {{#if audio_guide}}
-                    {{#with ../../guide}}
-                      <div>
-                        <em>{{name}}, {{language}}, {{rating}}</em>
-                      </div>
-                    {{/with}}
-                  {{/if}}
-                {{/each}}
-              </ul>
-            {{/with}}
-            {{#with venue}}
-              <b>{{name}}</b>
-              {{#with location}}
-                <address>
-                  {{address}},
-                  {{city}},
-                  {{country}}
-                </address>
-              {{/with}}
+    {{/with}}
+    <div>{{date}}</div>
+
+    {{#each program}}
+      <div class="mt-4">
+        <h3>{{name}}</h3>
+      </div>
+      <div>
+        ({{type}},
+        {{duration}}
+        days)
+      </div>
+
+      <section class="mt-4">
+        {{#with details}}
+          {{#with museum}}
+            <b>{{name}}</b>
+            {{#with location}}
+              <address>
+                {{address}}, {{city}}, {{country}}
+              </address>
             {{/with}}
             <ul>
-              {{#each performers}}
+              {{#each exhibits}}
                 <li><b>{{name}}</b></li>
-                <div>({{type}})</div>
-                {{#with ../guide}}
-                  <div>
-                    <em>{{name}}, {{language}}, {{rating}}</em>
-                  </div>
-                {{/with}}
+                <div>
+                  ({{#if artist}} {{artist}}, {{/if}}
+                  {{description}})
+                </div>
+                {{#if audio_guide}}
+                  {{#with ../../guide}}
+                    <div>
+                      <em>{{name}}, {{language}}, {{rating}}</em>
+                    </div>
+                  {{/with}}
+                {{/if}}
               {{/each}}
             </ul>
           {{/with}}
-        </section>
-      {{/each}}
-    </main>
+          {{#with venue}}
+            <b>{{name}}</b>
+            {{#with location}}
+              <address>
+                {{address}},
+                {{city}},
+                {{country}}
+              </address>
+            {{/with}}
+          {{/with}}
+          <ul>
+            {{#each performers}}
+              <li><b>{{name}}</b></li>
+              <div>({{type}})</div>
+              {{#with ../guide}}
+                <div>
+                  <em>{{name}}, {{language}}, {{rating}}</em>
+                </div>
+              {{/with}}
+            {{/each}}
+          </ul>
+        {{/with}}
+      </section>
+    {{/each}}
   {{/with}}
-</div>
+</main>
