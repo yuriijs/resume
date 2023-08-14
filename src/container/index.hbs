@@ -1,17 +1,55 @@
-{{! 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
+<main class="p-5">
 
-<div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+  <div class="mb-5">
+    <h1>Список страниц</h1>
+    <p>Проект обучения верстки резюме на курсе IT-Brains</p>
+  </div>
 
-  <button type='button' class='btn btn-primary'>
-    Купити
-  </button>
-</div>
+  <div class="row">
 
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+    <div class="col-2">
+      {{> index link="/skills" text="Skills"}}
+      {{> index link="/summary" text="Summary"}}
+      {{> index link="/education" text="Education"}}
+      {{> index link="/work" text="Work"}}
+    </div>
+    
+    <div class="col-2">
+      {{> index link="/person" text="Person"}}
+      {{> index link="/bio" text="Bio"}}
+      {{> index link="/program" text="Program"}}
+      {{> index link="/web" text="Web"}}
+      {{> index link="/js" text="JS"}}
+      {{> index link="/car" text="Car"}}
+      {{> index link="/mac" text="Mac"}}
+      {{> index link="/facebook" text="Facebook"}}
+    </div>
+    
+    <div class="col-2">
+      {{> index link="/bootstrap1" text="Bootstrap1"}}
+      {{> index link="/bootstrap2" text="Bootstrap2"}}
+      {{> index link="/bootstrap3" text="Bootstrap3"}}
+      {{> index link="/bootstrap4" text="Bootstrap4"}}
+      {{> index link="/bootstrap5" text="Bootstrap5"}}
+      {{> index link="/css1" text="CSS"}}
+    </div>
+
+    <div class="col-2">
+      {{> index link="/task21" text="Task21"}}
+      {{> index link="/task22" text="Task22"}}
+      {{> index link="/task31" text="Task31"}}
+    </div>
+
+    <div class="col-2">
+      {{> index link="/shophome" text="Shophome"}}
+      {{> index link="/shoporder" text="Shoporder"}}
+      {{> index link="/shopcart" text="Shopcart"}}
+      {{> index link="/shopprofile" text="Shopprofile"}}
+      {{> index link="/shopreview" text="Shopreview"}}
+      {{> index link="/shopcatalog" text="Shopcatalog"}}
+    </div>
+
+  </div>
+
+
+</main>

@@ -1,106 +1,84 @@
-<div>
-  <main>
-    <div>
-      <h1>{{name}}</h1>
-    </div>
-    <div>
-      <p>{{description}}</p>
-    </div>
+<main class="p-5">
+  <div><h1>{{name}}</h1></div>
+  <div><p>{{description}}</p></div>
 
-    {{#with history}}
-      <div>
-        <b>Designed by:</b>
-        {{founder}}
-      </div>
-      <div>
-        <b>First appeared:</b>
-        {{year}}
-      </div>
+  {{#with history}}
+    <div>
+      <b>Designed by:</b>
+      {{founder}}
+    </div>
+    <div>
+      <b>First appeared:</b>
+      {{year}}
+    </div>
+  {{/with}}
+  <br />
+
+  <section>
+    <div><h2>Types:</h2></div>
+    {{#each types}}
+      <span class='badge text-bg-primary'>{{this}}</span>
+    {{/each}}
+  </section>
+
+  <section>
+    <div class="mt-4"><h2>Syntax:</h2></div>
+    {{#with syntax}}
+      <b>Variables: </b>
+      {{#each variables}}
+        <span class='badge text-bg-info'>{{this}}</span>
+      {{/each}}
+      <br />
+      <b>Functions: </b>
+      <span class='badge text-bg-info'>
+        {{functions}}
+      </span>
+      <br />
+      <b>Conditionals: </b>
+      {{#each conditionals}}
+        <span class='badge text-bg-info'>{{this}}</span>
+      {{/each}}
+      <br />
+      <b>Loops: </b>
+      {{#each loops}}
+        <span class='badge text-bg-info'>{{this}}</span>
+      {{/each}}
+      <br />
+      <b>Classes: </b>
+      <span class='badge text-bg-info'>
+        {{classes}}
+      </span>
     {{/with}}
-    <br />
+  </section>
 
-    <section>
+  <section>
+    <div class="mt-4"><h2>Features:</h2></div>
+    {{#each features}}
+      <span class='badge text-bg-success'>{{this}}</span>
+    {{/each}}
+  </section>
+
+  <section>
+    <div class="mt-4"><h2>Libraries:</h2></div>
+    {{#each libraries}}
+      <span class='badge text-bg-dark'>{{this}}</span>
+    {{/each}}
+  </section>
+
+  <section>
+    <div class="mt-4"><h2>Tools:</h2></div>
+    {{#each tools}}
+      <span class='badge text-bg-warning'>{{this}}</span>
+    {{/each}}
+  </section>
+
+  <section>
+    <div class="mt-4"><h2>Community:</h2></div>
+    {{#each community}}
       <div>
-        <h2>Types:</h2>
+        <button type='button' class='btn btn-link'>{{name}}</button>
+        <span class='badge text-bg-secondary'>{{type}}</span>
       </div>
-      {{#each types}}
-        <span class='badge text-bg-primary'>{{this}}</span>
-      {{/each}}
-    </section>
-
-    <section>
-      <div>
-        <h2>Syntax:</h2>
-      </div>
-      {{#with syntax}}
-        <b>Variables: </b>
-        {{#each variables}}
-          <span class='badge text-bg-info'>{{this}}</span>
-        {{/each}}
-        <br />
-        <b>Functions: </b>
-        <span class='badge text-bg-info'>
-          {{functions}}
-        </span>
-        <br />
-        <b>Conditionals: </b>
-        {{#each conditionals}}
-          <span class='badge text-bg-info'>{{this}}</span>
-        {{/each}}
-        <br />
-        <b>Loops: </b>
-        {{#each loops}}
-          <span class='badge text-bg-info'>{{this}}</span>
-        {{/each}}
-        <br />
-        <b>Classes: </b>
-        <span class='badge text-bg-info'>
-          {{classes}}
-        </span>
-      {{/with}}
-    </section>
-
-    <section>
-      <div>
-        <h2>Features:</h2>
-      </div>
-      {{#each features}}
-        <span class='badge text-bg-success'>{{this}}</span>
-      {{/each}}
-    </section>
-
-    <section>
-      <div>
-        <h2>Libraries:</h2>
-      </div>
-      {{#each libraries}}
-        <span class='badge text-bg-dark'>{{this}}</span>
-      {{/each}}
-    </section>
-
-    <section>
-      <div>
-        <h2>Tools:</h2>
-      </div>
-      {{#each tools}}
-        <span class='badge text-bg-warning'>{{this}}</span>
-      {{/each}}
-    </section>
-
-    <section>
-      <div>
-        <h2>Community:</h2>
-      </div>
-      {{#each community}}
-        <button type='button' class='btn btn-link'>
-          {{name}}
-        </button>
-        <span class='badge text-bg-secondary'>
-          {{type}}
-        </span>
-        <br />
-      {{/each}}
-    </section>
-
-  </main>
-</div>
+    {{/each}}
+  </section>
+</main>

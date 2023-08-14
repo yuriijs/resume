@@ -1,18 +1,18 @@
 <main class="p-5">
 
-  <div class="nav">
-    <div class="nav item">
-      {{#with navigation}}
-      {{#each links}}
-      <a href="href" class="nav-link" target="_blank">{{text}}</a>
-      {{/each}}
-      {{/with}}
+  <div class="card">
+    <div class="nav">
+      <div class="nav item">
+        {{#with navigation}}
+        {{#each links}}
+        <a href="href" class="nav-link" target="_blank">{{text}}</a>
+        {{/each}}
+        {{/with}}
+      </div>
     </div>
   </div>
 
-  <hr class="mb-4">
-
-  <div class="row">
+  <div class="row mt-5">
     
     {{#with formBlock}}
       <div class="col-8">

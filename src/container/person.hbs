@@ -1,28 +1,22 @@
-<div>
+<main class="p-5">
   {{#with person}}
-  <main>
     <section>
       <div>
         <h1>{{name}}</h1>
       </div>
       <div>
-        <p>{{age}} years old, {{gender}}</p>
+        {{age}} years old, {{gender}}
       </div>
       {{#with address}}
       <div>
         <address>
-          {{street}}
-          {{city}}
-          {{state}}
-          {{zip}}
-          {{country}}
+          <em>{{street}} {{city}} {{state}} {{zip}} {{country}}</em>
         </address>
       </div>
       {{/with}}
     </section>
 
-    <br />
-    <hr />
+    <hr class="my-4">
 
     <section>
       <div>
@@ -39,13 +33,12 @@
       {{/each}}
     </section>
 
-    <br />
-    <hr />
+    <hr class="my-4">
 
     <section>
       {{#each workExperience}}
         <div>{{> title data="Work experience:"}}</div>
-        <div>{{title}}</div>
+        <div><b>{{title}}</b></div>
         <div>{{startDate}} - {{endDate}}</div>
         <div>
           <ul>
@@ -55,18 +48,16 @@
           </ul>
         </div>
 
-        <br />
-        <hr />
-        <br />
+        <hr class="my-4">
 
         <div>{{> title data="Information about company:"}}</div>
         <div>{{company}}, {{year_founded}}, {{industry}}</div>
-        <br />
+
         <div>
           {{#each employees}}
           <div><em>{{department}} {{position}}:</em> {{name}}</div>
-          <br />
-          <div><b>Projects:</b></div>
+
+          <div class="mt-4"><b>Projects:</b></div>
           <div>
             {{#each projects}}
               <div>{{name}} - <em>{{status}}</em></div>
@@ -75,7 +66,7 @@
                   <li>{{description}}</li>
                 </ul>
               </div>
-              <br />
+
               <b>Teams:</b>
               <div>
                 {{#each teams}}
@@ -85,8 +76,8 @@
                       <em>{{title}}:</em> {{name}} | <a href="mailto:{{email}}">{{email}}</a>
                     {{/with}}
                   </div>
-                  <br />
-                  <div>
+
+                  <div class="mt-4">
                     <b>Team members:</b>
                   </div>
                   <div>
@@ -95,21 +86,19 @@
                         <em>{{title}}</em>: {{name}} | <a href="mailto:{{email}}">{{email}}</a>
                         <br>({{skills}})
                       </div>
-                      <br />
-                      <div><b>Projects:</b></div>
+                      <div class="mt-4"><b>Projects:</b></div>
                         <div>
                           {{#each projects}}
                             <div>{{name}} ({{technologies}})</div>
                             <ul>
                               <li>{{description}}</li>
                             </ul>
-                            <br />
-                            <div>
+                            <div class="mt-4">
                               <b>Team members:</b>
                             </div>
                             <div>
                               {{#each team_members}}
-                              <p>{{name}} | <em>{{title}}</em></p>
+                              <div>{{name}} | <em>{{title}}</em></div>
                               {{/each}}
                             </div>
                           {{/each}}
@@ -128,7 +117,5 @@
       {{/each}}
     </section>
 
-    
-  </main>
   {{/with}}
-</div>
+</main>
