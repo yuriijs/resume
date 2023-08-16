@@ -39,68 +39,70 @@
       </select>
       </div>
     {{/each}}
-
-    <div class="col-4 mt-4">
-      <div class="card p-3">
-        {{#with filterBlock}}
-          {{#with sellers}}
-            <div class="mb-2">{{title}}</div>
-            {{#each list}}
-              <div class="form-check">
-                <label class="form-check-label">{{value}}</label>
-                <input type="checkbox" class="form-check-input">
-              </div>
-            {{/each}}
-          {{/with}}
-          <hr />
-          {{#with brands}}
-            <div class="mb-2">{{title}}</div>
-            {{#with input}}
-              <input class="form-control mb-2" placeholder="{{placeholder}}">
+    
+    <div class="row">
+      {{#with filterBlock}}
+        <div class="col-4 mt-4">
+          <div class="card p-3">
+            {{#with sellers}}
+              <div class="mb-2">{{title}}</div>
+              {{#each list}}
+                <div class="form-check">
+                  <label class="form-check-label">{{value}}</label>
+                  <input type="checkbox" class="form-check-input">
+                </div>
+              {{/each}}
             {{/with}}
-            {{#each options}}
-              <div class="form-check">
-                <label class="form-check-label">{{value}}</label>
-                <input type="checkbox" class="form-check-input">
-              </div>
-            {{/each}}
-          {{/with}}
-          <hr />
-          {{#with price}}
-            <div class="mb-2">{{title}}</div>
-            {{#with range}}
-              <input class="form-control mb-2" placeholder="{{from}}">
-              <input class="form-control mb-2" placeholder="{{to}}">
-            {{/with}}
-            {{#with button}}
-              <div>
-                <a href="{{link}}" target="_blank" class="btn btn-outline-secondary">
-                  {{text}}
-                </a>
-              </div>
-            {{/with}}
-          {{/with}}
-          <hr />
-          {{#each filterList}}
-            <div class="mb-2">{{title}}</div>
-            {{#each options}}
-              <div class="form-check">
-                <label class="form-check-label">{{value}}</label>
-                <input type="checkbox" class="form-check-input">
-              </div>
-            {{/each}}
             <hr />
-          {{/each}}
-        {{/with}}
+            {{#with brands}}
+              <div class="mb-2">{{title}}</div>
+              {{#with input}}
+                <input class="form-control mb-2" placeholder="{{placeholder}}">
+              {{/with}}
+              {{#each options}}
+                <div class="form-check">
+                  <label class="form-check-label">{{value}}</label>
+                  <input type="checkbox" class="form-check-input">
+                </div>
+              {{/each}}
+            {{/with}}
+            <hr />
+            {{#with price}}
+              <div class="mb-2">{{title}}</div>
+              {{#with range}}
+                <input class="form-control mb-2" placeholder="{{from}}">
+                <input class="form-control mb-2" placeholder="{{to}}">
+              {{/with}}
+              {{#with button}}
+                <div>
+                  <a href="{{link}}" target="_blank" class="btn btn-outline-secondary">
+                    {{text}}
+                  </a>
+                </div>
+              {{/with}}
+            {{/with}}
+            <hr />
+            {{#each filterList}}
+              <div class="mb-2">{{title}}</div>
+              {{#each options}}
+                <div class="form-check">
+                  <label class="form-check-label">{{value}}</label>
+                  <input type="checkbox" class="form-check-input">
+                </div>
+              {{/each}}
+              <hr />
+            {{/each}}
+          </div>
+        </div>
+      {{/with}}
+
+      <div class="col-8">
+        <div class="row">
+          {{> catalogltem}}
+        </div>
       </div>
+
     </div>
-    
-    <div class='col-4'>
-      <div class='card mt-4'>
-        {{> catalogltem}}
-      </div>
-    </div>
-    
   </div>
 
   {{#with service}}
